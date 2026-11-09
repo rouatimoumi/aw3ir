@@ -1,0 +1,94 @@
+
+/* Style général de la page */
+body {
+    background: linear-gradient(to right, #dbeafe, #e0e7ff);
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    color: #333;
+}
+
+/* Titre principal */
+h1 {
+    color: #243b6b;
+    border-bottom: 2px solid #647acb;
+    padding-bottom: 8px;
+}
+
+/* Paragraphes */
+p {
+    font-size: 16px;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+/* Cellules */
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+/* En-têtes des tableaux */
+th {
+    background-color: #334e8c;
+    color: white;
+}
+
+/* Colorer les lignes impaires */
+tr:nth-child(odd) {
+    background-color: #eaf0fa;
+}
+
+/* Changer la couleur d'une ligne au survol */
+tr:hover {
+    background-color: #c5d8f5;
+}
+
+/* Liens */
+a {
+    color: #334e8c;
+    text-decoration: none;
+}
+
+/* Changer la couleur des liens au survol */
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Agrandir les images au survol */
+img:hover {
+    transform: scale(2);
+    transition: transform 0.3s ease;
+}
+
+/* Adaptation aux petits écrans */
+@media only screen and (max-width: 600px) {
+
+    body {
+        background: radial-gradient(circle, 
+            rgba(63,94,251,1) 0%, 
+            rgba(252,70,107,1) 100%);
+        margin: 10px;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}

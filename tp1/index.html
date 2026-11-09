@@ -1,41 +1,112 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP1</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="main.js"></script>-->
+    <meta charset="UTF-8">
+    <title>Mon CV</title>
+    <link rel="stylesheet" href="cv.css">
 </head>
 
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP1
-  </nav>
-  <h1>TP 1</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
 
-  <h2><a href="experiences/index.html">Expériences</a></h2>
+    <h1>Roua Timoumi</h1>
+
+    <p>Étudiante en Master 2</p>
+
+    <!-- Informations personnelles -->
+    <h1>Informations personnelles</h1>
+
+    <table width="100%" border="1">
+        <tr>
+            <td>Email</td>
+            <td>rouatimoumi8@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Adresse</td>
+            <td>France</td>
+        </tr>
+    </table>
+
+    <!-- Formations -->
+    <h1>
+        <a href="formations.html">Formations</a>
+    </h1>
+
+    <table width="100%" border="1">
+        <tr>
+            <th>Diplôme</th>
+            <th>Établissement</th>
+            <th>Période</th>
+        </tr>
+        <tr>
+            <td>Master 2 Ingénierie et Innovation en Images et Réseaux</td>
+            <td>
+                <a href="https://www.univ-spn.fr/" target="_blank">
+                    Université Sorbonne Paris Nord
+                </a>
+            </td>
+            <td>2026 - 2027</td>
+        </tr>
+        <tr>
+            <td>Diplôme d'ingénieure en informatique</td>
+            <td>
+                <a href="https://www.insat.rnu.tn/" target="_blank">
+                    INSAT
+                </a>
+            </td>
+            <td>2021 - 2026</td>
+        </tr>
+    </table>
+
+    <!-- Expériences professionnelles -->
+    <h1>
+        <a href="experiences.html">Expériences professionnelles</a>
+    </h1>
+
+    <table width="100%" border="1">
+        <tr>
+            <th>Poste</th>
+            <th>Entreprise</th>
+            <th>Période</th>
+        </tr>
+        <tr>
+            <td>Stagiaire PFE - Développement d'un copilote IA</td>
+            <td>
+                <a href="https://www.plugandtel.com/" target="_blank">
+                    Plug & Tel
+                </a>
+            </td>
+            <td>Février - Août 2026</td>
+        </tr>
+        <tr>
+            <td>Stage en intelligence artificielle et vision par ordinateur</td>
+            <td>COSIM / SUP'COM</td>
+            <td>Juin - Août 2025</td>
+        </tr>
+    </table>
+
+    <!-- Compétences -->
+    <h1>Compétences techniques</h1>
+
+    <table width="100%" border="1">
+        <tr>
+            <th>Domaine</th>
+            <th>Compétences</th>
+        </tr>
+        <tr>
+            <td>Programmation</td>
+            <td>Python, Java, TypeScript, Go</td>
+        </tr>
+        <tr>
+            <td>Intelligence artificielle</td>
+            <td>Machine Learning, Deep Learning, RAG, LLM</td>
+        </tr>
+        <tr>
+            <td>Réseaux</td>
+            <td>5G, SDN, Kubernetes</td>
+        </tr>
+    </table>
+
 </body>
-
 </html>
