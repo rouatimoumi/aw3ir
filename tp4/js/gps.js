@@ -8,7 +8,13 @@ function getLocation() {
   }
 }
 
+// Si l'utilisateur l'autorise, on récupère les coordonnées dans l'objet "position"
 function showPosition(position) {
+  // NOUVEAU : écrire les coordonnées dans le champ Adresse
+  document.querySelector("#address").value =
+    position.coords.latitude + "," + position.coords.longitude;
+  calcNbChar("address");
+
   // paramètres pour l'affichage de la carte openstreetmap
   const zoom = 5;
   const delta = 0.05 / Math.pow(2, zoom - 10);
