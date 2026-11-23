@@ -36,29 +36,23 @@ function displayContactList() {
 }
 
 window.onload = function () {
-  // Ce code s'exécute une fois la page entièrement chargée
   console.log("DOM ready!");
 
-  // NOUVEAU : afficher les contacts déjà enregistrés dès l'ouverture de la page
   displayContactList();
 
-  // On prépare la modal Bootstrap une seule fois
   const myModal = new bootstrap.Modal(document.getElementById("myModal"));
 
-  // Clic sur le bouton GPS -> on demande la position
   document.querySelector("#gps").addEventListener("click", function (event) {
     event.preventDefault();
     getLocation(); // fonction définie dans gps.js
   });
 
-  // NOUVEAU : clic sur le bouton Reset -> on vide la liste et le tableau
   document.querySelector("#reset").addEventListener("click", function (event) {
     event.preventDefault();
     contactStore.reset();
     displayContactList();
   });
 
-  // On intercepte l'envoi du formulaire
   document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // empêche le rechargement de la page
     console.log("form submitted!");
@@ -86,7 +80,6 @@ window.onload = function () {
       errors.push("L'adresse email n'est pas valide.");
     }
 
-    // Date de naissance : obligatoire et pas dans le futur
     if (birthday === "") {
       errors.push("La date de naissance est obligatoire.");
     } else {
@@ -97,7 +90,6 @@ window.onload = function () {
       }
     }
 
-    // 3. Remplir la modal selon le résultat
     if (errors.length > 0) {
       document.querySelector(".modal-title").textContent = "Erreur dans le formulaire";
       document.querySelector(".modal-body").innerHTML =
@@ -106,7 +98,6 @@ window.onload = function () {
       // tout est correct -> on enregistre le contact (store.js)
       contactStore.add(name, firstname, birthday, address, email);
 
-      // NOUVEAU : on met à jour le tableau
       displayContactList();
 
       const mapsUrl = "http://maps.google.com/maps?q=" + encodeURIComponent(address);

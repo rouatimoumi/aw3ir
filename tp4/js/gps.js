@@ -8,7 +8,6 @@ function getLocation() {
   }
 }
 
-// Si l'utilisateur l'autorise, on récupère les coordonnées dans l'objet "position"
 function showPosition(position) {
   // paramètres pour l'affichage de la carte openstreetmap
   const zoom = 5;
@@ -36,7 +35,6 @@ function showPosition(position) {
       `;
 }
 
-// Au cas où l'utilisateur refuse, ou si une erreur arrive
 function showError(error) {
   switch (error.code) {
     case error.PERMISSION_DENIED:

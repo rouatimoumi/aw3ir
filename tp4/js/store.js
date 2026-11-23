@@ -1,11 +1,3 @@
-/*
-store.js
-Script pour gérer la liste de contacts en JSON
-
-Pour ajouter un contact :  contactStore.add(_name, _firstname, _date, _address, _mail);
-Pour récupérer la liste :  contactStore.getList();
-Pour vider la liste :      contactStore.reset();
-*/
 var contactStore = (function () {
   // variable privée : la liste est lue depuis le localStorage au démarrage
   let contactListString = localStorage.getItem("contactList");
